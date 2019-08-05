@@ -1,0 +1,15 @@
+.title{
+    font-family: 'Exo', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    font-weight: normal;
+    margin-bottom: 15px;
+    &--big{
+        font-size: 2rem;
+    }
+    &--small{
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}

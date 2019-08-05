@@ -1,0 +1,43 @@
+.text-input{
+    &--full-width{
+        width: 100%;
+    }
+    &--row{
+        flex-grow: 1;
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &--half{
+        width: 50%;
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__field{
+        width: 100%;
+        background-color: #37317a;
+        border: 1.5px solid #342e73;
+        color: #ffffff;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        padding: 0.75rem 1.125rem;
+        transition: 0.3s all ease;
+        margin-bottom: 15px;
+        font-family: "Roboto";
+        &--defaults{
+            border-radius: 0.5rem 0 0 0.5rem;
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+        &:focus{
+            outline: none;
+            background-color: #342e73;
+            border-color: #7659ff;
+            @include placeholder_opacity(0)
+        }
+        @include placeholder_color($periwinkle)
+    } 
+}

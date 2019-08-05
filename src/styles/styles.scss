@@ -1,3 +1,21 @@
 @import './variables.scss';
 @import './mixins.scss';
-@import './base.scss';
+@import './fa-icons.scss';
+@import './base/_base.scss';
+@import './components/blocks/button.scss';
+@import './components/typography/text.scss';
+@import './components/typography/title.scss';
+@import './components/forms/text-input.scss';
+@import './components/forms/select.scss';
+@import './components/forms/input-with-defaults.scss';
+@import './components/forms/form.scss';
+@import './components/forms/label.scss';
+@import './components/blocks/dashboard.scss';
+@import './components/blocks/card.scss';
+@import './components/blocks/smart-table.scss';
+@import './components/blocks/main-header.scss';
+@import './components/blocks/main-footer.scss';
+@import './components/blocks/aside-navigation.scss';
+
+
+

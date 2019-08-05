@@ -1,0 +1,26 @@
+.card {
+  background-color: $card-bg;
+  box-shadow: 0 8px 20px 0 rgba(40, 37, 89, 0.6);
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  flex-grow: 1;
+  &__header,
+  &__body,
+  &__footer {
+    padding: 1.25rem;
+  }
+  &__body {
+    width: 100%;
+  }
+  &__flex-row {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  &__header {
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+  }
+}

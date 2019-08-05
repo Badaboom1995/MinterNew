@@ -1,0 +1,23 @@
+.smart-table{
+    width: 100%;
+    margin-bottom: 15px;
+    &__table{
+        width: 100%;
+    }
+    &__title{
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    &__header{
+        background-color: #494299;
+    }
+    &__row{
+        &:nth-child(2n+1){
+            background-color: #3a347a;
+        }
+    }
+    &__cell{
+        border: 1px solid $border-color;
+        padding: 0.875rem 1.25rem;
+    }
+}

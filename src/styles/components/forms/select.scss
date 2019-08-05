@@ -1,0 +1,53 @@
+.select{
+    width: 210px;
+    position: relative;
+    margin-bottom: 15px;
+    &__list{
+        display: none;
+        z-index: 10;
+        position: absolute;
+        left: 0;
+        top: 36px;
+        width: 100%;
+        border: 2px solid $purple;
+        border-top: none;
+        font-size: 1rem;
+        line-height: 1.25;
+        background: $card-bg;
+        color: $periwinkle;
+        border-radius: 0 0 0.5rem 0.5rem;
+        &--enabled{
+            display: block;
+        }
+    }
+    &__list-item{
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        font-family: 'Roboto';
+        &:hover{
+            background-color: #7659ff;
+            color: #ffffff;
+        }
+    }
+    &__controls{
+        position: relative;
+    }
+    &--defaults{
+        margin-bottom: 0;
+    }
+    &--in-row{
+        margin-right: 30px;
+        flex-grow: 1;
+        width: auto;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &--half{
+        width: 50%;
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

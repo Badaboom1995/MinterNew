@@ -1,0 +1,119 @@
+.aside-navigation{
+    background-color: $card-bg;
+    border-radius: 0px 0.5rem 0px 0px;
+    height: 100%;
+    box-shadow: 0 8px 20px 0 rgba(40, 37, 89, 0.6);
+    &__list{
+        padding-left: 0;
+    }
+    &__sublist{
+        overflow: hidden;
+        background-color: $background;
+        width: 100%;
+        padding: 10px 0px;
+        padding-left: 20px;
+    }
+    &__logo{
+        margin-top: -2rem;
+        @media screen and (max-width:767px) {
+           margin-top: auto;
+        }
+    }
+    &__item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+    &__item-title{
+        position: relative;
+        display: flex;
+        padding: 0.5rem 1.25rem;
+        cursor: pointer;
+        min-height: 44px;
+        &--disabled{
+            &:after{
+                display: none;
+            }
+        }
+        &--container{
+            &:after{
+                content: '';
+                position: absolute;
+                top: calc(50% - 4.5px);
+                right: 10px;
+                width: 9px;
+                height: 9px;
+                border-top: 1px solid $dark-text;
+                border-right: 1px solid $dark-text;
+                transform: rotate(45deg);
+                transition: transform 0.3s ease
+            }
+            &:hover:after{
+                    border-color: #fff;
+            }
+        }
+        &--opened{
+            &:after{
+                transform: rotate(135deg);
+            }
+        }
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__item-title:hover &__link{
+        color: #fff;
+    }
+    &__link{
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+        text-decoration: none;
+        color: $dark-text;
+        padding: 0.5rem 1rem;
+        flex-grow: 1;
+        text-align: left;
+        font-family: 'Exo 2';
+        font-weight: 300;
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+        &:focus{
+            outline: none;
+            color: #fff;
+        }
+    }
+    &__icon{
+        width: 1.2rem;
+        opacity: 0.6;
+        img{
+            width: 100%;
+        }
+    }
+    &__header{
+        padding: 1.25rem;
+        display: flex;
+        justify-content: center;
+    }
+    &--closed &__link{
+        display: none;
+    }
+    &--closed &__item-title{
+        justify-content: center;
+    }
+    &--closed &__logo{
+        width: 45px;
+        height: 45px;
+        margin-top: -1rem;
+    }
+    &--closed &__logo img{
+        width: 28px;
+    }
+    &--closed &__header{
+        padding: 0;
+    }
+}

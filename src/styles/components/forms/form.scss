@@ -1,0 +1,10 @@
+.form{ 
+    background-color: $card-bg;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    font-family: "Roboto";
+    &__header, &__body, &__footer{
+        padding: 1.25rem;
+    }
+}

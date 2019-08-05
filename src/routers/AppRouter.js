@@ -1,34 +1,27 @@
 import React from 'react';
-import { Router, Route, Switch, NavLink } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import Home from '../pages/Home/Home';
-import CreateTest from 'pages/CreateTest/CreateTest';
-import NotFoundPage from '../pages/NotFoundPage';
-import Auth from '../HOC/Auth';
+import User from '../pages/User';
+import SendCoin from '../pages/SendCoin';
+import Transactions from '../pages/Transactions';
+import Header from 'components/Blocks/Header';
+import Navigation from '../components/Blocks/Navigation';
 
 export const history = createBrowserHistory();
 
 const AppRouter = () => (
   <Router history={history}>
-    <nav className="main-nav">
-      <NavLink exact activeClassName="main-nav__link--active" className="main-nav__link" to="/">
-        Задания
-      </NavLink>
-      <NavLink activeClassName="main-nav__link--active" className="main-nav__link" to="/tests">
-        Тесты
-      </NavLink>
-      {/* <NavLink activeClassName="main-nav__link--active" className="main-nav__link" to="/tests">
-        Список тестов
-      </NavLink> */}
-    </nav>
+    <Header />
     <div className="dashboard">
+      <div className={`dashboard__left-column`}>
+        <Navigation />
+      </div>
       <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/tests" component={CreateTest} />
-        <Route component={NotFoundPage} />
+        <Route path="/" component={SendCoin} exact />
+        <Route path="/table" component={Transactions} />
       </Switch>
     </div>
   </Router>
 );
 
-export default Auth()(AppRouter);
+export default AppRouter;
